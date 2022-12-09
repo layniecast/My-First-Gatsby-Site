@@ -10,6 +10,7 @@
 .heading {
   color: rgb(100, 20, 175);
   text-align: center;
+  padding: 2.5rem;
 }
 
 .nav-links {
@@ -18,6 +19,7 @@
   justify-content: center;
   list-style: none;
   padding-left: 0;
+  padding: 2.5rem;
 }
 
 .nav-link-item {
