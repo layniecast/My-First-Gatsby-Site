@@ -1,25 +1,23 @@
 // Step 1: Import react
 import * as React from "react"
-import { Link } from "gatsby"
-import Footer from "../components/footer"
+import Layout from "../components/layout"
+// import { Link } from "gatsby"
+// import Footer from "../components/footer"
 
 // Step 2: Define your component
 
 const IndexPage = () => {
   return (
     <>
-      <main>
-        <h1>Welcome to my Gatsby site!</h1>
-        <Link to="/about">About Me!</Link>
-        <p>I'm making this by following the Gatsby tutorial.</p>
-      </main>
-      <Footer />
+      <Layout pageTitle="Home" pageHeading="Laynie's">
+        Welcome to my Gatsby Site!
+      </Layout>
     </>
   )
 }
 
 // You'll learn this in the next task
-export const Head = () => <title>Home Page</title>
+export const Head = () => <title>Laynie's Page</title>
 
 // Step 3: Export your component
 export default IndexPage

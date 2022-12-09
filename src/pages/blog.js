@@ -6,8 +6,10 @@ import Layout from "../components/layout"
 const About = () => {
   return (
     <>
-      <Layout pageTitle="About" pageHeading="my about">
-        <p>I am Laynie! How are you today? Thanks for stopping by!</p>
+      <Layout pageTitle="Blog" pageHeading="my Blog">
+        <div className="para1">
+          <p>I am Laynie! How are you today? Thanks for stopping by!</p>
+        </div>
       </Layout>
       {/* <div className="footer">
         <Footer />
@@ -15,12 +17,5 @@ const About = () => {
     </>
   )
 }
-
-export const Head = () => (
-  <>
-    <title>About</title>
-    <meta name="description" content="Your description" />
-  </>
-)
 
 export default About

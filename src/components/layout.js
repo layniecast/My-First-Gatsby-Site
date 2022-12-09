@@ -1,40 +1,51 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/how-to/querying-data/use-static-query/
- */
-
 import * as React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { Link } from "gatsby"
+import {
+  container,
+  heading,
+  navLinks,
+  navLinkItem,
+  navLinkText,
+  footer,
+} from "./layout.module.css"
+import Footer from "./footer.js"
 
-import Header from "./header"
-import "./layout.css"
+// console.log("container: ", container)
 
-const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
+const Layout = ({ pageTitle, pageHeading, children }) => {
   return (
-    <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: `var(--size-content)`,
-          padding: `var(--size-gutter)`,
-        }}
-      >
-        <main>{children}</main>
+    <main className={container}>
+      <title>{pageTitle}</title>
+      <nav>
+        <ul className={navLinks}>
+          <li className={navLinkItem}>
+            <Link className={navLinkText} to="/">
+              Home
+            </Link>
+          </li>
+          <li className={navLinkItem}>
+            <Link className={navLinkText} to="/about">
+              About
+            </Link>
+          </li>
+          <li className={navLinkItem}>
+            <Link className={navLinkText} to="/blog">
+              Blog
+            </Link>
+          </li>
+          <li>
+            <Link className={navLinkText} to="/contact">
+              Contact
+            </Link>
+          </li>
+        </ul>
+      </nav>
+      <h1 className={heading}>Welcome to {pageHeading} page!</h1>
+      {children}
+      <div className={footer}>
+        <Footer />
       </div>
-    </>
+    </main>
   )
 }
 

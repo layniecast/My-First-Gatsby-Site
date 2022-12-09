@@ -1,0 +1,37 @@
+.container {
+  margin: auto;
+  max-width: 1600px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  background-color: rgba(236, 236, 243, 0.25);
+  font-size: 20px;
+}
+
+.heading {
+  color: rgb(100, 20, 175);
+  text-align: center;
+}
+
+.nav-links {
+  background-color: rgb(232, 232, 245);
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding-left: 0;
+}
+
+.nav-link-item {
+  padding-right: 2rem;
+}
+
+.nav-link-text {
+  color: black;
+  text-decoration: none;
+}
+
+.footer {
+  text-align: center;
+  /* background-color: rgb(253, 205, 212); */
+  background-color: rgb(221, 221, 243);
+  padding: 2.5rem;
+}
