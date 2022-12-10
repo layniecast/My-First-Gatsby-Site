@@ -42,7 +42,7 @@ const IndexPage = () => {
         <StaticImage
           src="../images/example.png"
           alt="web pc image"
-          width={200}
+          width={250}
           height={200}
           loading="eager"
         />
